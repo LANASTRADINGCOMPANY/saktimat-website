@@ -1,0 +1,67 @@
+---
+import '../styles/global.css'
+import logo from '../assets/logo.png'
+
+interface Props {
+  title?: string
+  description?: string
+}
+
+const {
+  title = 'Saktimat',
+  description = 'An AI-powered behavioural operating system for people who think differently.',
+} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <slot name="head" />
+  </head>
+  <body class="bg-[#FAF7F2] text-[#3D4259]">
+
+    <header class="w-full border-b border-[#1A1A2E]/8">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+
+        <a href="/" class="flex items-center gap-2">
+          <img src={logo.src} alt="Saktimat" class="h-9 w-9" />
+          <span class="text-xl font-semibold text-[#1A1A2E] tracking-tight">Saktimat</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm text-[#3D4259]">
+          <a href="/" class="hover:text-[#1A1A2E] transition-colors">Home</a>
+          <a href="/how-it-works" class="hover:text-[#1A1A2E] transition-colors">How it works</a>
+          <a href="/install" class="hover:text-[#1A1A2E] transition-colors">Install</a>
+          <a href="/resources" class="hover:text-[#1A1A2E] transition-colors">Resources</a>
+        </nav>
+
+        <a
+          href="https://app.saktimat.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-[#4A90D9] text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-[#3a7bc8] transition-colors"
+        >
+          Get Started
+        </a>
+
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="w-full border-t border-[#1A1A2E]/8 mt-24">
+      <div class="max-w-5xl mx-auto px-6 py-8 flex items-center justify-between text-sm text-[#3D4259]/60">
+        <a href="/privacy" class="hover:text-[#3D4259] transition-colors">Privacy</a>
+        <span>© {new Date().getFullYear()} Saktimat</span>
+      </div>
+    </footer>
+
+  </body>
+</html>
