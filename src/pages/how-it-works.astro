@@ -17,52 +17,60 @@ import BaseLayout from '../layouts/BaseLayout.astro'
     </p>
   </section>
 
-  <!-- Section 1: Morning -->
-  <div class="max-w-2xl mx-auto px-6 py-12 text-center">
-    <h3 class="text-lg font-semibold text-[#1A1A2E] mb-3">Morning</h3>
-    <p class="text-[#3D4259]/80 leading-relaxed">
-      Morning sets your intention for the day. A few quick questions about your sleep, energy, and what's ahead, then you get a short, personalised briefing to start your day with.
-    </p>
-  </div>
-
-  <!-- Section 1: Evening -->
-  <div class="max-w-2xl mx-auto px-6 py-12 text-center">
-    <h3 class="text-lg font-semibold text-[#1A1A2E] mb-3">Evening</h3>
-    <p class="text-[#3D4259]/80 leading-relaxed">
-      Evening closes the loop. You reflect on how the day actually went, and Saktimat shows you your Alignment Compass, a simple signal for where you landed, not a score.
-    </p>
-  </div>
+  <!-- Section 1: Two check-ins a day -->
+  <section class="max-w-5xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white rounded-2xl shadow-sm p-8">
+        <h3 class="text-lg font-semibold text-[#1A1A2E] mb-3">Morning</h3>
+        <p class="text-[#3D4259]/80 leading-relaxed">
+          Morning sets your intention for the day. A few quick questions about your sleep, energy, and what's ahead, then you get a short, personalised briefing to start your day with.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-sm p-8">
+        <h3 class="text-lg font-semibold text-[#1A1A2E] mb-3">Evening</h3>
+        <p class="text-[#3D4259]/80 leading-relaxed">
+          Evening closes the loop. You reflect on how the day actually went, and Saktimat shows you your Alignment Compass, a simple signal for where you landed, not a score.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- Section 2: The Alignment Compass -->
-  <div class="max-w-2xl mx-auto px-6 py-12 text-center">
-    <h2 class="text-2xl font-semibold text-[#1A1A2E] mb-4">The Alignment Compass</h2>
-    <p class="text-[#3D4259]/80 leading-relaxed mb-8">
-      After each evening check-in, you'll see one of five states: Grounded, Aligned, Drifting, Disconnected, or Overloaded. This isn't a grade. A hard day is data, not a failure. The first week is a calibration window. The more you check in, the more accurate it becomes.
-    </p>
-    <div class="flex flex-wrap justify-center gap-3">
-      <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[#3B6BD9]/10 text-[#3B6BD9]" style="margin-right: 12px; display: inline-block;">Grounded</span>
-      <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[#4A90D9]/10 text-[#4A90D9]" style="margin-right: 12px; display: inline-block;">Aligned</span>
-      <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[#94A3B8]/10 text-[#94A3B8]" style="margin-right: 12px; display: inline-block;">Drifting</span>
-      <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[#F59E0B]/10 text-[#F59E0B]" style="margin-right: 12px; display: inline-block;">Disconnected</span>
-      <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[#DC8B8B]/10 text-[#DC8B8B]" style="display: inline-block;">Overloaded</span>
+  <section class="max-w-3xl mx-auto px-6 py-20 text-center">
+    <div class="bg-white rounded-2xl shadow-sm p-10">
+      <h2 class="text-2xl font-semibold text-[#1A1A2E] mb-4">The Alignment Compass</h2>
+      <p class="text-[#3D4259]/80 leading-relaxed mb-8">
+        After each evening check-in, you'll see one of five states: Grounded, Aligned, Drifting, Disconnected, or Overloaded. This isn't a grade. A hard day is data, not a failure. The first week is a calibration window. The more you check in, the more accurate it becomes.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[#3B6BD9]/10 text-[#3B6BD9]">Grounded</span>
+        <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[#4A90D9]/10 text-[#4A90D9]">Aligned</span>
+        <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[#94A3B8]/10 text-[#94A3B8]">Drifting</span>
+        <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[#F59E0B]/10 text-[#F59E0B]">Disconnected</span>
+        <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[#DC8B8B]/10 text-[#DC8B8B]">Overloaded</span>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- Section 3: Your patterns, your habits -->
-  <div class="max-w-2xl mx-auto px-6 py-12 text-center">
-    <h2 class="text-2xl font-semibold text-[#1A1A2E] mb-4">Your patterns, your habits</h2>
-    <p class="text-[#3D4259]/80 leading-relaxed">
-      Add the habits you actually want to track, not generic ones. Saktimat starts with three defaults, but you're in full control of what matters to you. Add small daily reminders too. Feeding the dog, taking medication, whatever helps you feel on top of your day.
-    </p>
-  </div>
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <div class="bg-white rounded-2xl shadow-sm p-10">
+      <h2 class="text-2xl font-semibold text-[#1A1A2E] mb-4">Your patterns, your habits</h2>
+      <p class="text-[#3D4259]/80 leading-relaxed">
+        Add the habits you actually want to track, not generic ones. Saktimat starts with three defaults, but you're in full control of what matters to you. Add small daily reminders too. Feeding the dog, taking medication, whatever helps you feel on top of your day.
+      </p>
+    </div>
+  </section>
 
   <!-- Section 4: Everything stays yours -->
-  <div class="max-w-2xl mx-auto px-6 py-12 text-center">
-    <h2 class="text-2xl font-semibold text-[#1A1A2E] mb-4">Everything stays yours</h2>
-    <p class="text-[#3D4259]/80 leading-relaxed">
-      Every check-in, every reflection, every note you leave yourself stays stored under your own history, reviewable anytime. Nothing is shared, nothing is sold. After 7 days, your first weekly pattern summary becomes available. A written reflection on what your data is starting to show.
-    </p>
-  </div>
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <div class="bg-white rounded-2xl shadow-sm p-10">
+      <h2 class="text-2xl font-semibold text-[#1A1A2E] mb-4">Everything stays yours</h2>
+      <p class="text-[#3D4259]/80 leading-relaxed">
+        Every check-in, every reflection, every note you leave yourself stays stored under your own history, reviewable anytime. Nothing is shared, nothing is sold. After 7 days, your first weekly pattern summary becomes available. A written reflection on what your data is starting to show.
+      </p>
+    </div>
+  </section>
 
   <!-- Closing CTA -->
   <section class="py-24">

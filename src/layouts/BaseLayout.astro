@@ -29,7 +29,7 @@ const {
       <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
 
         <a href="/" class="flex items-center gap-2">
-          <img src={logo.src} alt="Saktimat" class="h-9 w-9" />
+          <img src={logo.src} alt="Saktimat" class="h-16 w-16" />
           <span class="text-xl font-semibold text-[#1A1A2E] tracking-tight">Saktimat</span>
         </a>
 
@@ -57,9 +57,14 @@ const {
     </main>
 
     <footer class="w-full border-t border-[#1A1A2E]/8 mt-24">
-      <div class="max-w-5xl mx-auto px-6 py-8 flex items-center justify-between text-sm text-[#3D4259]/60">
-        <a href="/privacy" class="hover:text-[#3D4259] transition-colors">Privacy</a>
-        <span>© {new Date().getFullYear()} Saktimat</span>
+      <div class="max-w-5xl mx-auto px-6 py-8 space-y-3">
+        <p class="text-sm text-[#3D4259]/60 text-center">
+          Currently in closed beta. Email <a href="mailto:admin@saktimat.com" class="text-[#4A90D9] hover:underline">admin@saktimat.com</a> or call <a href="tel:0435058303" class="text-[#4A90D9] hover:underline">0435058303</a> to request access.
+        </p>
+        <div class="flex items-center justify-between text-sm text-[#3D4259]/60">
+          <a href="/privacy" class="hover:text-[#3D4259] transition-colors">Privacy</a>
+          <span>© {new Date().getFullYear()} Saktimat</span>
+        </div>
       </div>
     </footer>
 

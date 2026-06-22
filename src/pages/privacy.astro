@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout
+  title="Privacy — Saktimat"
+  description="Privacy and data guidelines for Saktimat during closed beta."
+>
+
+  <!-- Header -->
+  <section class="max-w-3xl mx-auto px-6 pt-24 pb-16 text-center">
+    <p class="text-xs font-semibold uppercase tracking-widest text-[#4A90D9] mb-4">Closed Beta</p>
+    <h1 class="text-4xl sm:text-5xl font-semibold text-[#1A1A2E] leading-tight tracking-tight mb-5">
+      Privacy & Data Guidelines
+    </h1>
+    <p class="text-lg text-[#3D4259]/80 leading-relaxed">
+      Last updated June 2026.
+    </p>
+  </section>
+
+  <!-- During Closed Beta -->
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <div class="bg-white rounded-2xl shadow-sm p-10">
+      <h2 class="text-2xl font-semibold text-[#1A1A2E] mb-6">During Closed Beta</h2>
+      <div class="space-y-4 text-[#3D4259]/80 leading-relaxed">
+        <p>Your check-in data, journal entries, and behavioural logs are stored securely using Supabase (PostgreSQL) with row-level security. Only you can access your own data.</p>
+        <p>As the app administrator, we have database access for debugging and technical improvement only. We review aggregate patterns, such as check-in completion rates and alignment state distributions, not individual entries or personal content.</p>
+        <p>Your data is never sold, shared with third parties, or used for advertising. Ever.</p>
+        <p>AI briefings are generated using Anthropic's Claude API. Your check-in data is sent to Anthropic's servers to generate your daily response. Anthropic's privacy policy applies to this processing. We send only what is necessary to generate your briefing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Post Public Release -->
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <div class="bg-white rounded-2xl shadow-sm p-10">
+      <h2 class="text-2xl font-semibold text-[#1A1A2E] mb-6">Post Public Release</h2>
+      <div class="space-y-4 text-[#3D4259]/80 leading-relaxed">
+        <p>A full privacy policy will be published before public launch covering all data handling in detail.</p>
+        <p>You will be able to export your data and request permanent deletion at any time.</p>
+        <p>Any changes to how your data is collected, stored, or used will be communicated clearly before they take effect. You will always have the option to opt out.</p>
+        <p>Admin access to individual user data will be restricted further as the user base grows.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Your Data Rights (Now) -->
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <div class="bg-white rounded-2xl shadow-sm p-10">
+      <h2 class="text-2xl font-semibold text-[#1A1A2E] mb-6">Your Data Rights (Now)</h2>
+      <div class="space-y-4 text-[#3D4259]/80 leading-relaxed">
+        <p>You can delete your account at any time from Settings. Send a deletion request and all your data will be permanently removed within 48 hours.</p>
+        <p>Questions about your data? Contact us at <a href="mailto:admin@saktimat.com" class="text-[#4A90D9] hover:underline">admin@saktimat.com</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing statement -->
+  <section class="max-w-3xl mx-auto px-6 py-20 text-center">
+    <p class="text-lg text-[#3D4259]/60 leading-relaxed italic">
+      "Saktimat is built on the principle that your behavioural data belongs to you. That will not change."
+    </p>
+  </section>
+
+</BaseLayout>
