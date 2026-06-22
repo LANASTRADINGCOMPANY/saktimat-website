@@ -25,7 +25,7 @@ const {
   </head>
   <body class="bg-[#FAF7F2] text-[#3D4259]">
 
-    <header class="w-full border-b border-[#1A1A2E]/8">
+    <header class="w-full border-b border-[#1A1A2E]/8 relative">
       <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
 
         <a href="/" class="flex items-center gap-2">
@@ -40,16 +40,42 @@ const {
           <a href="/resources" class="hover:text-[#1A1A2E] transition-colors">Resources</a>
         </nav>
 
-        <a
-          href="https://app.saktimat.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="bg-[#4A90D9] text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-[#3a7bc8] transition-colors"
-        >
-          Get Started
-        </a>
+        <div class="flex items-center gap-3">
+          <a
+            href="https://app.saktimat.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-[#4A90D9] text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-[#3a7bc8] transition-colors"
+          >
+            Get Started
+          </a>
+
+          <button
+            id="mobile-menu-button"
+            class="md:hidden p-2 -mr-2"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <svg id="menu-icon-open" class="w-6 h-6 text-[#1A1A2E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-icon-close" class="w-6 h-6 text-[#1A1A2E] hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
 
       </div>
+
+      <nav
+        id="mobile-menu"
+        class="hidden md:hidden flex-col gap-1 px-6 pb-4 text-sm text-[#3D4259] border-t border-[#1A1A2E]/8 pt-4"
+      >
+        <a href="/" class="py-2 hover:text-[#1A1A2E] transition-colors">Home</a>
+        <a href="/how-it-works" class="py-2 hover:text-[#1A1A2E] transition-colors">How it works</a>
+        <a href="/install" class="py-2 hover:text-[#1A1A2E] transition-colors">Install</a>
+        <a href="/resources" class="py-2 hover:text-[#1A1A2E] transition-colors">Resources</a>
+      </nav>
     </header>
 
     <main>
@@ -68,5 +94,20 @@ const {
       </div>
     </footer>
 
+    <script>
+      const menuButton = document.getElementById('mobile-menu-button')
+      const mobileMenu = document.getElementById('mobile-menu')
+      const iconOpen = document.getElementById('menu-icon-open')
+      const iconClose = document.getElementById('menu-icon-close')
+
+      menuButton?.addEventListener('click', () => {
+        const isHidden = mobileMenu?.classList.contains('hidden')
+        mobileMenu?.classList.toggle('hidden')
+        mobileMenu?.classList.toggle('flex')
+        iconOpen?.classList.toggle('hidden')
+        iconClose?.classList.toggle('hidden')
+        menuButton?.setAttribute('aria-expanded', isHidden ? 'true' : 'false')
+      })
+    </script>
   </body>
 </html>
